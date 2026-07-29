@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0DD49F13-DC47-3A77-8C87-746F2ECC0525}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>docs</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\Doxyfile">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating HTML documentation</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs"
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\doxygen\bin\doxygen.exe"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3native.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\main.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\news.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\quick.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\moving.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compile.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\build.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\intro.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\context.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\monitor.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\window.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\input.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\vulkan.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compat.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\internal.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\DoxygenLayout.xml;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\header.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\footer.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\extra.css;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\spaces.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating HTML documentation</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd "D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs"
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\doxygen\bin\doxygen.exe"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3native.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\main.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\news.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\quick.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\moving.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compile.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\build.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\intro.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\context.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\monitor.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\window.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\input.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\vulkan.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compat.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\internal.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\DoxygenLayout.xml;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\header.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\footer.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\extra.css;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\spaces.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating HTML documentation</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd "D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs"
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\doxygen\bin\doxygen.exe"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3native.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\main.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\news.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\quick.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\moving.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compile.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\build.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\intro.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\context.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\monitor.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\window.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\input.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\vulkan.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compat.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\internal.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\DoxygenLayout.xml;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\header.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\footer.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\extra.css;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\spaces.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating HTML documentation</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd "D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs"
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\doxygen\bin\doxygen.exe"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3native.h;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\main.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\news.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\quick.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\moving.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compile.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\build.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\intro.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\context.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\monitor.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\window.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\input.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\vulkan.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compat.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\internal.md;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\DoxygenLayout.xml;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\header.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\footer.html;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\extra.css;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\spaces.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\CMakeFiles\b0676ae1c88b3596a9a017c7277bf2af\docs.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\html\index.html;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/docs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/docs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\Doxyfile.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/docs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/docs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\Doxyfile.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/docs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/docs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\Doxyfile.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/docs/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/docs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\Doxyfile.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\main.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\news.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\quick.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\moving.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compile.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\build.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\intro.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\context.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\monitor.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\window.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\input.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\vulkan.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compat.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\internal.md">
+    </None>
+    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs">
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\ZERO_CHECK.vcxproj">
+      <Project>{F6BBC3D8-80DF-3A5C-A2F0-C10E0CC4B2BA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
