@@ -178,7 +178,55 @@ gfxFrustum YourClipper::
 */
 ComputeFrustum(gfxMatrix4 const&	perspective_mtx) {
   //@todo Implement me.
-  return (gfxFrustum());
+
+    // we need to send in 6 planes...
+
+    /*
+    On the other hand, OpenGL and this framework store 4 x 4 matrix elements
+        using an array of 16 elements which are stored in memory using column - major
+        order.Therefore, the elements of the 4 x 4 matrix M are stored in array
+        mMat[16] as follows :
+
+    | mMat[0]		mMat[4]		mMat[8]		mMat[12]|
+        |																				|
+        | mMat[1]		mMat[5]		mMat[9]		mMat[13]|
+        |																				|
+        | mMat[2]		mMat[6]		mMat[10]	mMat[14]|
+        |																				|
+        | mMat[3]		mMat[7]		mMat[11]	mMat[15] |
+
+    */
+
+    gfxVector4 r0 = perspective_mtx.GetRow4(0);
+    gfxVector4 r1 = perspective_mtx.GetRow4(1);
+    gfxVector4 r2 = perspective_mtx.GetRow4(2);
+    gfxVector4 r3 = perspective_mtx.GetRow4(3);
+
+    gfxFrustum mFrustum{};
+
+    gfxVector4 left = (-1)*r0 - r3;
+    gfxVector4 right = r0 - r3;
+    gfxVector4 bottom = (-1) * r1 - r3;
+    gfxVector4 top = r1 - r3;
+    gfxVector4 nnear = (-1) * r2 - r3;
+    gfxVector4 ffar = r2 - r3;
+
+    // normalise all of them before sending it in
+    left.Normalize();
+    right.Normalize();
+    bottom.Normalize();
+    top.Normalize();
+    nnear.Normalize();
+    ffar.Normalize();
+
+    mFrustum.l = gfxPlane{ left.x, left.y, left.z, left.w };
+    mFrustum.r = gfxPlane{ right.x, right.y, right.z, right.w };
+    mFrustum.b = gfxPlane{ bottom.x, bottom.y, bottom.z, bottom.w };
+    mFrustum.t = gfxPlane{ top.x, top.y, top.z, top.w };
+    mFrustum.n = gfxPlane{ nnear.x, nnear.y, nnear.z, nnear.w };
+    mFrustum.f = gfxPlane{ ffar.x, ffar.y, ffar.z, ffar.w };
+
+    return (gfxFrustum(mFrustum));
 }
 
 /*  _________________________________________________________________________ */
