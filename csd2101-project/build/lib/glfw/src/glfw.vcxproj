@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1484B06E-E600-31BB-82AC-89CD61A85CFE}</ProjectGuid>
+    <ProjectGuid>{16A291D3-5244-32CB-BE7F-DD7932C10A24}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glfw.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glfw.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glfw.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glfw.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glfw3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,7 +120,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -147,10 +147,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -163,7 +163,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -190,10 +190,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -206,7 +206,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -232,10 +232,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glm;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src;D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerGraphicsFinalProject\csd2101-project\lib\glm;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include;D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src;D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -247,11 +247,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\CMakeLists.txt">
+    <CustomBuild Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ComputerGraphicsFinalProject/csd2101-project -BD:/ComputerGraphicsFinalProject/csd2101-project/build --check-stamp-file D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,12 +259,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ComputerGraphicsFinalProject/csd2101-project -BD:/ComputerGraphicsFinalProject/csd2101-project/build --check-stamp-file D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,12 +272,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ComputerGraphicsFinalProject/csd2101-project -BD:/ComputerGraphicsFinalProject/csd2101-project/build --check-stamp-file D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -285,12 +285,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project" "-BD:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build" --check-stamp-file "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ComputerGraphicsFinalProject/csd2101-project -BD:/ComputerGraphicsFinalProject/csd2101-project/build --check-stamp-file D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -298,49 +298,49 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\CMake\glfw3.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3native.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\internal.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\platform.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\mappings.h" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\context.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\init.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\input.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\monitor.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\platform.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\vulkan.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\window.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\egl_context.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\osmesa_context.c" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_platform.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_joystick.h" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_init.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_monitor.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_window.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_joystick.c" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_time.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_thread.h" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_module.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_time.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_thread.c" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_platform.h" />
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_joystick.h" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_init.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_joystick.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_monitor.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_window.c" />
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\wgl_context.c" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\internal.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\platform.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\mappings.h" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\context.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\init.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\input.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\monitor.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\platform.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\vulkan.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\window.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\egl_context.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\osmesa_context.c" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_platform.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_joystick.h" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_init.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_monitor.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_window.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_joystick.c" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_time.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_thread.h" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_module.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_time.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_thread.c" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_platform.h" />
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_joystick.h" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_init.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_joystick.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_monitor.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_window.c" />
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\wgl_context.c" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\ZERO_CHECK.vcxproj">
-      <Project>{F6BBC3D8-80DF-3A5C-A2F0-C10E0CC4B2BA}</Project>
+    <ProjectReference Include="D:\ComputerGraphicsFinalProject\csd2101-project\build\ZERO_CHECK.vcxproj">
+      <Project>{A5F53904-24EC-3E11-A969-52ECD38B9BC7}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

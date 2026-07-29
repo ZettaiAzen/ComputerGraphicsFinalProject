@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/install_manifest.txt\"")
+if (NOT EXISTS "D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/install_manifest.txt" files)
+file(READ "D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

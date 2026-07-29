@@ -11,6 +11,6 @@ C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake
 C:/Program Files/CMake/share/cmake-4.3/Modules/GNUInstallDirs.cmake
 C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake
 C:/Program Files/CMake/share/cmake-4.3/Modules/WriteBasicConfigVersionFile.cmake
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/CMake/cmake_uninstall.cmake.in
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/CMake/glfw3Config.cmake.in
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/CMakeLists.txt
+D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/CMake/cmake_uninstall.cmake.in
+D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/CMake/glfw3Config.cmake.in
+D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/CMakeLists.txt

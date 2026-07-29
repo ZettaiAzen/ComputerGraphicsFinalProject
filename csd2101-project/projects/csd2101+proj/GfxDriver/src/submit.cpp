@@ -41,7 +41,82 @@ ComputeModelBVSphere(std::vector<gfxVector3> const& verts)
 */
 {
   //@todo Implement me.
-  return (gfxSphere(0.f, 0.f, 0.f, 1.f));
+
+    // find pairs of vertices containing minmax x, y, z values
+    // lets start by initialising all of them with the first vertex
+    gfxVector3 maxX{verts[0]}, minX{ verts[0] }, maxY{ verts[0] }, minY{ verts[0] }, maxZ{ verts[0] }, minZ{ verts[0] };
+
+    // loop through the vertices
+    for (const gfxVector3& vec : verts) {
+        if (vec.x > maxX.x) {
+            maxX = vec;
+        }
+        if (vec.x < minX.x) {
+            minX = vec;
+        }
+
+        if (vec.y > maxY.y) {
+            maxY = vec;
+        }
+        if (vec.y < minY.y) {
+            minY = vec;
+        }
+
+        if (vec.z > maxZ.z) {
+            maxZ = vec;
+        }
+        if (vec.z < minZ.z) {
+            minZ = vec;
+        }
+    }
+
+    // find the pair with the greatest distance
+    gfxVector3 xVec = maxX - minX;
+    gfxVector3 yVec = maxY - minY;
+    gfxVector3 zVec = maxZ - minZ;
+
+    float xDist = xVec.Length();
+    float yDist = yVec.Length();
+    float zDist = zVec.Length();
+
+    float greatestDist = (xDist > yDist ? (xDist > zDist ? xDist : zDist) : (yDist > zDist ? yDist : zDist));
+
+    // SECOND PASS
+    // 
+    // depending on which axis it is, calculate center
+    gfxVector3 center{};
+
+    if (greatestDist == xDist) {
+        center = minX + (0.5)*xVec;
+    }
+    else if (greatestDist == yDist) {
+        center = minY + (0.5) * yVec;
+    }
+    else {
+        // its z
+        center = minZ + (0.5) * zVec;
+    }
+
+    float radius = greatestDist / 2.0f;
+
+    // check for all points again, if any of them is outside
+    for (const gfxVector3 point : verts) {
+        gfxVector3 toPoint = point - center;
+        float dist = toPoint.Length();
+        if (dist > radius) {
+            toPoint.Normalize();
+            gfxVector3 toPointOpp = center - radius * toPoint;
+            
+            // update center
+            center = (toPointOpp + point);
+            center /= 2.f;
+
+            gfxVector3 centerToEdge = point - center;
+            radius = centerToEdge.Length();
+        }
+    }
+
+  return (gfxSphere(center.x, center.y, center.z, radius));
 }
 
 /*  _________________________________________________________________________ */

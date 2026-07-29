@@ -1,114 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\context.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\init.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\input.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\input.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\monitor.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\monitor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\platform.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\platform.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\vulkan.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\vulkan.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\window.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\egl_context.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\egl_context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\osmesa_context.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\osmesa_context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_init.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_monitor.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_monitor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_window.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_joystick.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_joystick.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_module.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_module.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_time.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_time.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_thread.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_thread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_init.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_joystick.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_joystick.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_monitor.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_monitor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_window.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\wgl_context.c">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\wgl_context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include\GLFW\glfw3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\include\GLFW\glfw3native.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\include\GLFW\glfw3native.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\internal.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\platform.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\mappings.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\mappings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_platform.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\null_joystick.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\null_joystick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_time.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_thread.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_thread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_platform.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\win32_joystick.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\win32_joystick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\src\CMakeLists.txt" />
+    <CustomBuild Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{F9A69DEA-C0EB-3C37-AA9F-70C1A0B0FC2B}</UniqueIdentifier>
+      <UniqueIdentifier>{259B5EB8-3D84-3D9E-9486-A6ED0E335241}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{35B74CF2-4925-3E46-B59A-4FD29EA2760D}</UniqueIdentifier>
+      <UniqueIdentifier>{6C5F1039-44EE-316A-9B7C-9B70D1CBA383}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

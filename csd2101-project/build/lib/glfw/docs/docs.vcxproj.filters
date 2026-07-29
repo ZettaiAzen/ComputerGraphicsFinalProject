@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\Doxyfile" />
-    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\CMakeFiles\b0676ae1c88b3596a9a017c7277bf2af\docs.rule">
+    <CustomBuild Include="D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\docs\Doxyfile" />
+    <CustomBuild Include="D:\ComputerGraphicsFinalProject\csd2101-project\build\CMakeFiles\08ca62a74a0d68f2c4952879290e3d34\docs.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\CMakeLists.txt" />
+    <CustomBuild Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\main.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\news.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\quick.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\moving.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compile.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\build.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\intro.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\context.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\monitor.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\window.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\input.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\vulkan.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\compat.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\lib\glfw\docs\internal.md" />
-    <None Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\main.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\news.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\quick.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\moving.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\compile.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\build.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\intro.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\context.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\monitor.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\window.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\input.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\vulkan.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\compat.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\lib\glfw\docs\internal.md" />
+    <None Include="D:\ComputerGraphicsFinalProject\csd2101-project\build\lib\glfw\docs\CMakeFiles\docs" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{CC2141DF-040D-338F-915C-40298D711588}</UniqueIdentifier>
+      <UniqueIdentifier>{748239F1-0696-315E-8BEA-0140AAAC261D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

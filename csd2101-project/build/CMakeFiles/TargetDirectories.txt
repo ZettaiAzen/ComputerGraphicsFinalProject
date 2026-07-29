@@ -1,16 +1,16 @@
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/CMakeFiles/csd2101+proj.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/CMakeFiles/INSTALL.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/CMakeFiles/ALL_BUILD.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/CMakeFiles/ZERO_CHECK.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/CMakeFiles/uninstall.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/CMakeFiles/INSTALL.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/CMakeFiles/ALL_BUILD.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/glfw.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/update_mappings.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/src/CMakeFiles/INSTALL.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/docs/CMakeFiles/docs.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glfw/docs/CMakeFiles/INSTALL.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glew/CMakeFiles/libglew_static.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glew/CMakeFiles/libglew_shared.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glew/CMakeFiles/INSTALL.dir
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/build/lib/glew/CMakeFiles/ALL_BUILD.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/CMakeFiles/csd2101+proj.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/CMakeFiles/INSTALL.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/CMakeFiles/ALL_BUILD.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/CMakeFiles/ZERO_CHECK.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/CMakeFiles/uninstall.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/CMakeFiles/INSTALL.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/CMakeFiles/ALL_BUILD.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/glfw.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/update_mappings.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/src/CMakeFiles/INSTALL.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/docs/CMakeFiles/docs.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glfw/docs/CMakeFiles/INSTALL.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glew/CMakeFiles/libglew_static.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glew/CMakeFiles/libglew_shared.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glew/CMakeFiles/INSTALL.dir
+D:/ComputerGraphicsFinalProject/csd2101-project/build/lib/glew/CMakeFiles/ALL_BUILD.dir

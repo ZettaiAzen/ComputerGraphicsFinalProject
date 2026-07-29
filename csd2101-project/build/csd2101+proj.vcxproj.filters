@@ -1,117 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\src\blitquad.cpp">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\blitquad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\src\glhelper.cpp">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\glhelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\src\glslshader.cpp">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\glslshader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\src\main.cpp">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp">
+    <ClCompile Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\include\blitquad.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\include\blitquad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\include\glhelper.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\include\glhelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\include\glslshader.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\include\glslshader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Camera.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Clipping.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Clipping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Lighting.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Lighting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Picking.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Picking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Rasterization.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Rasterization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Transformation.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Controller_Transformation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\CycleTimer.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\CycleTimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Frustum.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Frustum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\GFX.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\GFX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\GFXInternal.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\GFXInternal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\GraphicsPipe.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\GraphicsPipe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Math.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Matrix4.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Matrix4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\MeshGenerator_Plane.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\MeshGenerator_Plane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\MeshGenerator_Point.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\MeshGenerator_Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\MeshImporter_IFS.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\MeshImporter_IFS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Model.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Object.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Quaternion.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Quaternion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Sphere.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Sphere.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Transform.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Vector3.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Vector4.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Vector4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Vertex.h">
+    <ClInclude Include="D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxLib\gfx\Vertex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\SIT-DIGIPEN-Y1-TRI3\Introduction to Computer Graphics (CSD 2101)\csd2101-project\CMakeLists.txt" />
+    <CustomBuild Include="D:\ComputerGraphicsFinalProject\csd2101-project\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{F9A69DEA-C0EB-3C37-AA9F-70C1A0B0FC2B}</UniqueIdentifier>
+      <UniqueIdentifier>{259B5EB8-3D84-3D9E-9486-A6ED0E335241}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{35B74CF2-4925-3E46-B59A-4FD29EA2760D}</UniqueIdentifier>
+      <UniqueIdentifier>{6C5F1039-44EE-316A-9B7C-9B70D1CBA383}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

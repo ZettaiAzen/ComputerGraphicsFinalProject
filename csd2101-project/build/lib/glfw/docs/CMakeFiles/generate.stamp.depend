@@ -2,5 +2,5 @@
 C:/Program Files/CMake/share/cmake-4.3/Modules/FindDoxygen.cmake
 C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/docs/CMakeLists.txt
-D:/SIT-DIGIPEN-Y1-TRI3/Introduction to Computer Graphics (CSD 2101)/csd2101-project/lib/glfw/docs/Doxyfile.in
+D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/docs/CMakeLists.txt
+D:/ComputerGraphicsFinalProject/csd2101-project/lib/glfw/docs/Doxyfile.in
