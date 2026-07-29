@@ -135,7 +135,31 @@ Transform(gfxMatrix4 const& xform) const
 */
 {
   //@todo Implement me.
-  return (gfxSphere(0.f, 0.f, 0.f, 1.f));
+
+    gfxVector4 newCenter = xform * gfxVector4(center.x, center.y, center.z, 1.0);
+
+    // using lengths of each axis edge to check for the greatest scale...
+    gfxVector4 edgeX = gfxVector4(center.x + radius, center.y, center.z, 1.0);
+    gfxVector4 newEdgeX = xform * edgeX;
+
+    gfxVector4 edgeY = gfxVector4(center.x, center.y + radius, center.z, 1.0);
+    gfxVector4 newEdgeY = xform * edgeY;
+
+    gfxVector4 edgeZ = gfxVector4(center.x, center.y, center.z +radius, 1.0);
+    gfxVector4 newEdgeZ = xform * edgeZ;
+
+    gfxVector4 xVec = newEdgeX - newCenter;
+    gfxVector4 yVec = newEdgeY - newCenter;
+    gfxVector4 zVec = newEdgeZ - newCenter;
+
+    float xDist = xVec.Length();
+    float yDist = yVec.Length();
+    float zDist = zVec.Length();
+
+    // the greatest distance is the new radius
+    float newRadius = (xDist > yDist ? (xDist > zDist ? xDist : zDist) : (yDist > zDist ? yDist : zDist));
+
+    return (gfxSphere(newCenter.x, newCenter.y, newCenter.z, newRadius));
 }
 
 /*                                                           culling/clipping
