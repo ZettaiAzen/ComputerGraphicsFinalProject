@@ -17,10 +17,10 @@ All content (c) 2002 DigiPen Institute of Technology, all rights reserved.
 // functions gfxModel::ComputeModelBVSphere() and gfxSphere::Transform() - both
 // these functions are defined in file submit.cpp.
 // You must implement these functions first for all tasks except the
-// first-person camera and rasterizer to work correctly!!!
+// first-person camera and rasterizer to work correctly!!!g
 //#define YOUR_RASTERIZER
 //#define YOUR_CAMERA
-//#define YOUR_CULLER_CLIPPER
+#define YOUR_CULLER_CLIPPER
 
 #include  "../../GfxLib/gfx/GFX.h"
 #include "submit.h"

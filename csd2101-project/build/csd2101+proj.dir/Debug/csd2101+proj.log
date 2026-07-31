@@ -1,8 +1,2 @@
-﻿  Building Custom Rule D:/ComputerGraphicsFinalProject/csd2101-project/CMakeLists.txt
-  blitquad.cpp
-  glhelper.cpp
-  glslshader.cpp
-  main.cpp
-  submit.cpp
-  Generating Code...
+﻿  main.cpp
   csd2101+proj.vcxproj -> D:\ComputerGraphicsFinalProject\csd2101-project\build\Debug\csd2101+proj.exe

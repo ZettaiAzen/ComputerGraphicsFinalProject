@@ -1,0 +1,10 @@
+^D:\COMPUTERGRAPHICSFINALPROJECT\CSD2101-PROJECT\BUILD\CMAKEFILES\ED0E475897AADD64E6B01FAF4B9D71F5\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ComputerGraphicsFinalProject/csd2101-project -BD:/ComputerGraphicsFinalProject/csd2101-project/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/ComputerGraphicsFinalProject/csd2101-project/build/csd2101+proj.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

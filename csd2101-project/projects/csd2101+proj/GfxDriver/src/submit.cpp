@@ -204,6 +204,7 @@ ComputeFrustum(gfxMatrix4 const&	perspective_mtx) {
 
     gfxFrustum mFrustum{};
 
+    // might have to double check these? unsure
     gfxVector4 left = (-1)*r0 - r3;
     gfxVector4 right = r0 - r3;
     gfxVector4 bottom = (-1) * r1 - r3;
@@ -211,13 +212,25 @@ ComputeFrustum(gfxMatrix4 const&	perspective_mtx) {
     gfxVector4 nnear = (-1) * r2 - r3;
     gfxVector4 ffar = r2 - r3;
 
+
+    auto normalizePlane = [](gfxVector4& vec) {
+        gfxVector3 temp{ vec.x, vec.y, vec.z };
+        float length = temp.Length();
+        
+        vec.x /= length;
+        vec.y /= length;
+        vec.z /= length;
+        vec.w /= length;
+        };
+
+
     // normalise all of them before sending it in
-    left.Normalize();
-    right.Normalize();
-    bottom.Normalize();
-    top.Normalize();
-    nnear.Normalize();
-    ffar.Normalize();
+    normalizePlane(left);
+    normalizePlane(right);
+    normalizePlane(bottom);
+    normalizePlane(top);
+    normalizePlane(nnear);
+    normalizePlane(ffar);
 
     mFrustum.l = gfxPlane{ left.x, left.y, left.z, left.w };
     mFrustum.r = gfxPlane{ right.x, right.y, right.z, right.w };
@@ -226,7 +239,7 @@ ComputeFrustum(gfxMatrix4 const&	perspective_mtx) {
     mFrustum.n = gfxPlane{ nnear.x, nnear.y, nnear.z, nnear.w };
     mFrustum.f = gfxPlane{ ffar.x, ffar.y, ffar.z, ffar.w };
 
-    return (gfxFrustum(mFrustum));
+    return (mFrustum);
 }
 
 /*  _________________________________________________________________________ */
@@ -252,8 +265,28 @@ sphere crosses the appropriate plane for that outcode bit.
 */
 Cull(gfxSphere const& bounding_sphere, gfxFrustum const&	frustum, gfxOutCode *ptr_outcode) {
   //@todo Implement me.
-  *ptr_outcode = 0; // for now, assume bounding sphere completely inside frustum
-  return (false);	  // for now, assume object is not trivially rejected
+
+    // check for each side in this order: LRBTNF
+    *ptr_outcode = (int)0; // negate everything first
+
+    // we can use a for loop
+    for (int i = 0; i < 6; ++i) {
+        float dist = (frustum.mPlanes[i].a * bounding_sphere.center.x) + (frustum.mPlanes[i].b * bounding_sphere.center.y) + (frustum.mPlanes[i].c * bounding_sphere.center.z) + (frustum.mPlanes[i].d * 1);
+        if (dist > bounding_sphere.radius) { 
+            // cull it as it is too far
+            return true;
+        }
+        else { // it is straddling the line
+            if (std::abs(dist) < bounding_sphere.radius) {
+                *ptr_outcode |= ((int)(1) << (i)); // adjust outcode accordingly
+            }
+        }
+    }
+
+    return false;
+
+  //*ptr_outcode = 0; // for now, assume bounding sphere completely inside frustum
+  /*return (false);	*/  // for now, assume object is not trivially rejected
 }
 
 /*  _________________________________________________________________________ */
@@ -306,8 +339,114 @@ that form triangles when taken in groups of three.
 @return None
 */
 Clip(gfxOutCode outcode, gfxVertexBuffer const& vertex_buffer) {
-  //@todo Implement me.
-  return (gfxVertexBuffer());
+  //@todo Implement me. :elephant:
+   
+    // i dont know if the outcode being 0 will come here??? but ill check incase
+    // trivially accepted for bounding sphere
+    if (outcode == 0) {
+        // pass it as it is
+        return vertex_buffer;
+    }
+
+    // now we check for trivially rejected / trivially accepted vertexes
+    gfxOutCode resultReject{ vertex_buffer[0].oc }; // initialise first
+    gfxOutCode resultAccept{ vertex_buffer[0].oc }; 
+
+    for (int i = 1; i < vertex_buffer.size(); ++i) {
+        resultReject &= vertex_buffer[i].oc;
+        resultAccept |= vertex_buffer[i].oc;
+    }
+
+    if (resultReject != 0) {
+        return gfxVertexBuffer{}; // empty!!! reject
+    }
+    
+    if (resultAccept == 0) {
+        return vertex_buffer; // pass it as it is
+    }
+
+    // now we go through clipper stage
+    gfxVertexBuffer m_vertexBuffer{vertex_buffer};
+    for (int y = 0; y < 6; ++y) {
+        // see if the outcode is out for the respective stage
+        if (outcode & ((unsigned int)1 << (y))) { // this means it needs to be clipped
+            // loop through the vertices
+
+            gfxVertexBuffer side_buffer{};
+            for (size_t i = 0; i < m_vertexBuffer.size(); ++i) {
+                gfxVertex vec0 = m_vertexBuffer[i];
+                gfxVertex vec1 = m_vertexBuffer[(i + 1)%m_vertexBuffer.size()];
+
+                // four different kinds, IN IN, OUT OUT, IN OUT, OUT IN
+                // using only IN and OUT vertices not OUT and IN
+
+                // checking for out out in which we skip
+                if (vec0.bc[y] > 0 && vec1.bc[y] > 0) { // they are out
+                    continue;
+                }
+
+                if (vec0.bc[y] <= 0 && vec1.bc[y] <= 0) { // they are inside
+                    side_buffer.push_back(vec1);
+                    continue;
+                } 
+                
+                bool INOUT_bool = (vec0.bc[y] <= 0 && vec1.bc[y] > 0);
+
+                gfxVertex in{};
+                gfxVertex out{};
+
+                if (INOUT_bool) {
+                    in = vec0;
+                    out = vec1;
+                }
+                else {
+                    in = vec1;
+                    out = vec0;
+                }
+
+                float t = in.bc[y] / (in.bc[y] - out.bc[y]);
+                gfxVertex midpoint{ in };
+
+                midpoint.x_c += t * (out.x_c - in.x_c); midpoint.y_c += t * (out.y_c - in.y_c); midpoint.z_c += t * (out.z_c - in.z_c); midpoint.w_c += t * (out.w_c - in.w_c);
+                midpoint.s += t * (out.s - in.s); midpoint.t += t * (out.t - in.t);
+                midpoint.r += t * (out.r - in.r); midpoint.g += t * (out.g - in.g); midpoint.b += t* (out.b - in.b); midpoint.a += t* (out.a - in.a);
+
+                midpoint.oc = (unsigned int)0;
+                for (int z = 0; z < 6; ++z) {
+                    midpoint.bc[z] += t * (out.bc[z] - in.bc[z]);
+                    midpoint.oc |= midpoint.bc[z] > 0 ? ((unsigned int)1 << z) : 0;
+                }
+
+                if (INOUT_bool) {
+                    // check for the size of the side buffer first, if its empty then u put in two if not just put in the new point (+1)
+                    side_buffer.push_back(midpoint);
+                }
+                else {
+                    // out to in
+                    side_buffer.push_back(midpoint);
+                    side_buffer.push_back(in);
+                }
+            }
+            m_vertexBuffer = side_buffer;
+        }
+    }
+
+
+    if (m_vertexBuffer.size() < 3) { // invalid ?
+        return gfxVertexBuffer{};
+    }
+
+    gfxVertexBuffer modifiedVertex{};
+    // change the quad into triangles, using the first vertex as the pivot/source
+    for (size_t i = 0; i < m_vertexBuffer.size() - 2; ++i) {
+        modifiedVertex.push_back(m_vertexBuffer[0]);
+        // ^ pivot
+        // add the next two vertices for triangle
+        modifiedVertex.push_back(m_vertexBuffer[i + 1]);
+        modifiedVertex.push_back(m_vertexBuffer[i + 2]);
+    }
+
+  return (modifiedVertex);
 }
 
 /*                                                              rasterization
