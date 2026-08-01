@@ -1,2 +1,41 @@
-﻿  main.cpp
+﻿  submit.cpp
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(599,12): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(599,12): warning C4244:         with
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(599,12): warning C4244:         [
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(599,12): warning C4244:             _Ty=float
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(599,12): warning C4244:         ]
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(600,12): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(600,12): warning C4244:         with
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(600,12): warning C4244:         [
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(600,12): warning C4244:             _Ty=float
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(600,12): warning C4244:         ]
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(602,12): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(602,12): warning C4244:         with
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(602,12): warning C4244:         [
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(602,12): warning C4244:             _Ty=float
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(602,12): warning C4244:         ]
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(603,12): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(603,12): warning C4244:         with
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(603,12): warning C4244:         [
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(603,12): warning C4244:             _Ty=float
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(603,12): warning C4244:         ]
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(660,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(661,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(688,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(819,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(820,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(826,11): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(827,11): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(829,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(830,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(921,40): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(925,40): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(931,40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(932,40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(937,40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(938,40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(949,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(950,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(955,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\ComputerGraphicsFinalProject\csd2101-project\projects\csd2101+proj\GfxDriver\src\submit.cpp(956,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   csd2101+proj.vcxproj -> D:\ComputerGraphicsFinalProject\csd2101-project\build\Debug\csd2101+proj.exe

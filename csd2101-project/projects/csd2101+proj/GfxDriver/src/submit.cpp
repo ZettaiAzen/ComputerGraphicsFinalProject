@@ -567,6 +567,144 @@ or window) coordinates from the bottom-left corner to upper-left corner.
 */
 {
   //@todo Implement me.
+  
+  // check for valid triangle via signed area via cross product
+  
+  // area = (x1-x0)(y2-y0) - (x2-x0)(y1-y0)
+  float area = (v1.x_d - v0.x_d) * (v2.y_d - v0.y_d) - (v2.x_d - v0.x_d)*(v1.y_d - v0.y_d);
+  if (area <= 0) { // if area is 0 or -ve, reject
+      return;
+  }
+
+  // if it is fine, calculate all the edge equations
+
+  // c -> P0.x*P1.y - P1.x*P0.y
+  gfxVector3 l0{(v1.y_d - v2.y_d), (v2.x_d - v1.x_d),(v1.x_d * v2.y_d - v2.x_d * v1.y_d) };  // it is opposite v0, v2-v1
+  gfxVector3 l1{ (v2.y_d - v0.y_d), (v0.x_d - v2.x_d),(v2.x_d * v0.y_d - v0.x_d * v2.y_d) }; // opposite v1,  v0-v2
+  gfxVector3 l2{ (v0.y_d - v1.y_d), (v1.x_d - v0.x_d), (v0.x_d*v1.y_d - v1.x_d*v0.y_d)}; // opposite v2,  v1-v0
+
+  // checking for top left
+
+  // if a != 0, if a is +ve it means y coords are moving down (left edge)
+  // if a = 0, horizontal line, if b is neg it means moving right to left (x coord), top edge
+  bool tl0 = (l0.x != 0) ? (l0.x > 0.0 ? true : false) : (l0.y < 0.0 ? true : false);
+  bool tl1 = (l1.x != 0) ? (l1.x > 0.0 ? true : false) : (l1.y < 0.0 ? true : false); 
+  bool tl2 = (l2.x != 0) ? (l2.x > 0.0 ? true : false) : (l2.y < 0.0 ? true : false);
+
+  auto dotProduct = [](gfxVector3 const& v0, gfxVector3 const& v1) -> float{
+      return (v0.x * v1.x + v0.y * v1.y + v0.z * v1.z);
+  };
+
+  // bounding box, get min and max xy values
+  int xmin = std::min({v0.x_d, v1.x_d, v2.x_d});
+  int xmax = std::max({ v0.x_d, v1.x_d, v2.x_d });
+
+  int ymin = std::min({ v0.y_d, v1.y_d, v2.y_d });
+  int ymax = std::max({ v0.y_d, v1.y_d, v2.y_d });
+
+
+  // precompute the a, b ,c
+  float eval0{dotProduct(l0, gfxVector3{xmin+0.5f, ymin+0.5f, 1})};
+  float eval1{ dotProduct(l1, gfxVector3{xmin + 0.5f, ymin + 0.5f, 1}) };
+  float eval2{ dotProduct(l2, gfxVector3{xmin + 0.5f, ymin + 0.5f, 1}) };
+
+  // checking for texture
+  unsigned int* tex = dev->GetCurrentTexture();
+
+  // checking for depth test
+  bool wdepth = dev->DepthTestEnabled();
+  float* depthBuf{};
+  size_t width{};
+  size_t height{};
+
+  if (wdepth) {
+      depthBuf = dev->GetDepthBuffer();
+      width = dev->GetWidth(); // it has the same dimensions as the colour buffer
+      height = dev->GetHeight();
+  }
+
+  // now we start the loop
+  for(int y{ymin} ; y < ymax; ++y){
+    float heval0{ eval0 };
+    float heval1{ eval1 };
+    float heval2{ eval2 };
+
+    for (int x{ xmin }; x < xmax; ++x) {
+
+        // check for valid point in line
+        // this is not a valid line
+
+        bool in_l0 = (heval0 > 0 || (heval0 == 0 && tl0));
+        bool in_l1 = (heval1 > 0 || (heval1 == 0 && tl1));
+        bool in_l2 = (heval2 > 0 || (heval2 == 0 && tl2));
+
+        if (!(in_l0 && in_l1 && in_l2)){
+            
+            // move to the next point
+
+            heval0 += l0.x;
+            heval1 += l1.x;
+            heval2 += l2.x;
+            continue;
+        }
+
+        // weights
+        float a = heval0 / area;
+        float b = heval1 / area;
+        float c = heval2 / area;
+
+        gfxVertex m_vertex{};
+
+        m_vertex.x_d = x;
+        m_vertex.y_d = y;
+
+        // if there is texture, calculate that 
+        if (tex) {
+            float s = (a * (v0.s) + b * (v1.s) + c * (v2.s));
+            float t = (a * (v0.t) + b * (v1.t) + c * (v2.t));
+            m_vertex.s = s;
+            m_vertex.t = t;
+        }
+        else {
+            // calculate color
+            float red = (a * (v0.r) + b * (v1.r) + c * (v2.r));
+            float green = (a * (v0.g) + b * (v1.g) + c * (v2.g));
+            float blue = (a * (v0.b) + b * (v1.b) + c * (v2.b));
+            float alpha = (a * (v0.a) + b * (v1.a) + c * (v2.a));
+
+            m_vertex.r = red;
+            m_vertex.g = green;
+            m_vertex.b = blue;
+            m_vertex.a = alpha;
+        }
+
+        // send that to be drawn
+
+        if (wdepth) {
+            
+            float depth = (a * (v0.z_d) + b * (v1.z_d) + c * (v2.z_d));
+            int flipped_y = height - 1 - y;
+            if (depthBuf[flipped_y * width + x] > depth) {
+                DrawPoint(dev, m_vertex);
+                depthBuf[flipped_y * width + x] = depth;
+            }
+        }
+        else {
+            DrawPoint(dev, m_vertex);
+        }
+
+        heval0 += l0.x;
+        heval1 += l1.x;
+        heval2 += l2.x;
+    }
+
+    eval0 += l0.y;
+    eval1 += l1.y;
+    eval2 += l2.y;
+  }
+
+
+
   return;
 }
 
@@ -587,6 +725,79 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
   */
 {
   //@todo Implement me.
+
+    unsigned int* framebuffer = dev->GetFrameBuffer();
+    if (!framebuffer) { // just incase??
+        return;
+    }
+
+    int width = static_cast<int>(dev->GetWidth()); // it has the same dimensions as the colour buffer
+    int height = static_cast<int>(dev->GetHeight());
+
+    // check if x y coords are even in the range
+
+    int x = static_cast<int>(v0.x_d);
+    int y = static_cast<int>(v0.y_d);
+
+    int flipped_y = height - y - 1;
+
+    if ((flipped_y >= height || flipped_y < 0) || (x >= width || x < 0)) {
+        return; // skip this point
+    }
+
+
+    // i need to check if im using colours or texture here
+    // set framebuffer to colour
+    
+    // check if im doing colour or texture
+    unsigned int* tex = dev->GetCurrentTexture();
+
+    if (tex) {
+        // doing texture
+        // wrapping because of GL_REPEAT
+        float floor_s = v0.s - std::floor(v0.s);
+        float floor_t = v0.t - std::floor(v0.t);
+
+        // we need to scale to the texture coords now
+        int  tW = static_cast<int>(dev->GetCurrentTextureWidth());
+        int  tH = static_cast<int>(dev->GetCurrentTextureHeight());
+
+        int scaled_s = static_cast<int>(tW * floor_s);
+        int scaled_t = static_cast<int>(tH * floor_t);
+        
+        // clamping just in case of rounding errors
+        scaled_s = std::clamp(scaled_s, 0, static_cast<int>(tW - 1));
+        scaled_t = std::clamp(scaled_t, 0, static_cast<int>(tH - 1));
+
+        int flipped_t = tH - 1 - scaled_t;
+
+        // check for valid
+        if ((flipped_t < tH && flipped_t >= 0) && (scaled_s < tW && scaled_s >= 0)) {
+            framebuffer[flipped_y * width + x] = tex[flipped_t * tW + scaled_s];
+        }
+
+    }
+    else {
+        // we are doing colours
+        unsigned int m_r = static_cast<int>(v0.r * 255);
+        unsigned int m_g = static_cast<int>(v0.g * 255);
+        unsigned int m_b = static_cast<int>(v0.b * 255);
+
+        // clamping just in case
+        m_r = std::clamp(m_r, (unsigned int)0, (unsigned int)255);
+        m_g = std::clamp(m_g, (unsigned int)0, (unsigned int)255);
+        m_b = std::clamp(m_b, (unsigned int)0, (unsigned int)255);
+
+        uint32_t clr{};
+        clr |= m_r << 16;
+        clr |= m_g << 8;
+        clr |= m_b;
+
+            
+        framebuffer[flipped_y * width + x] = clr;
+        
+    }
+
   return;
 }
 
@@ -601,6 +812,150 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
 */
 {
   //@todo Implement me.
+
+    // need to see which direction we are going and the line dydx
+    int dx = v1.x_d - v0.x_d;
+    int dy = v1.y_d - v0.y_d;
+
+    bool isSwapped{ std::abs(dy) > std::abs(dx) };
+
+    int x, y, xstep, ystep, d, dmaj, dmin;
+
+    x = v0.x_d;
+    y = v0.y_d;
+
+    dx = v1.x_d - v0.x_d;
+    dy = v1.y_d - v0.y_d;
+
+    xstep = (dx < 0) ? -1 : 1;
+    ystep = (dy < 0) ? -1 : 1;
+
+    dx = (dx < 0) ? -dx : dx;
+    dy = (dy < 0) ? -dy : dy;
+
+    if (isSwapped) {
+        std::swap(x, y);
+        std::swap(xstep, ystep);
+        std::swap(dx, dy);
+    }
+
+    d = (2 * dy) - dx;
+    dmaj = (2 * dy) - (2 * dx);
+    dmin = (2 * dy);
+
+    // checking for texture
+    unsigned int* tex = dev->GetCurrentTexture();
+
+    // checking for depth test
+    bool wdepth = dev->DepthTestEnabled();
+
+    size_t width = dev->GetWidth(); // it has the same dimensions as the colour buffer
+    size_t height = dev->GetHeight();
+
+    int flipped_y{ static_cast<int>(height - 1 - v0.y_d) };
+    int real_x{ static_cast<int>(v0.x_d) };
+
+    if (flipped_y < height && real_x < width) {
+        if (wdepth) {
+            float* depthBuf = dev->GetDepthBuffer();
+
+            if (depthBuf[flipped_y * width + real_x] > v0.z_d) {
+                DrawPoint(dev, v0);
+                depthBuf[flipped_y * width + real_x] = v0.z_d;
+            }
+        }
+        else {
+            DrawPoint(dev, v0);
+        }
+    }
+    
+  
+
+    // i guess we have to interpolate ? ?
+    
+    // t = i/dx * (v1.s - v0.s) + v0.s ...
+
+    for (int i = 1; i < dx; ++i) {
+        if (d > 0) { // we move!
+            d += dmaj;
+            y += ystep;
+        }
+        else {
+            d += dmin;
+        }
+        x += xstep;
+
+        gfxVertex m_vertex{v0};
+        float t = i / (float)dx;
+
+        // checking for colour or texture or depth
+
+
+
+        if (tex) {
+            m_vertex.s += t * (v1.s-v0.s);
+            m_vertex.t += t * (v1.t - v0.t);
+        }
+        else {
+            // calculate color
+
+            m_vertex.r += t * (v1.r - v0.r);
+            m_vertex.g += t * (v1.g - v0.g);
+            m_vertex.b += t * (v1.b - v0.b);
+            m_vertex.a += t * (v1.a - v0.a);
+        }
+
+        if (wdepth) {
+            float* depthBuf = dev->GetDepthBuffer();
+            size_t width = dev->GetWidth(); // it has the same dimensions as the colour buffer
+            size_t height = dev->GetHeight();
+
+            m_vertex.z_d += t * (v1.z_d - v0.z_d);
+            
+            int flipped_y{};
+            int real_x{};
+
+            if (isSwapped) {
+                flipped_y = height - 1 - x;
+                real_x = y;
+            }
+            else {
+                flipped_y = height - 1 - y;
+                real_x = x;
+            }
+            if (flipped_y < height && real_x < width) {
+                if (depthBuf[flipped_y * width + real_x] > m_vertex.z_d) {
+                    if (isSwapped) {
+                        m_vertex.x_d = y;
+                        m_vertex.y_d = x;
+                        DrawPoint(dev, m_vertex); // to look at
+                    }
+                    else {
+
+                        m_vertex.x_d = x;
+                        m_vertex.y_d = y;
+                        DrawPoint(dev, m_vertex); // to look at
+                    }
+                    depthBuf[flipped_y * width + real_x] = m_vertex.z_d;
+                }
+            }
+            
+        }
+        else {
+            if (isSwapped) {
+
+                m_vertex.x_d = y;
+                m_vertex.y_d = x;
+                DrawPoint(dev, m_vertex); // to look at
+            }
+            else {
+
+                m_vertex.x_d = x;
+                m_vertex.y_d = y;
+                DrawPoint(dev, m_vertex); // to look at
+            }
+        }
+    }
   return;
 }
 
