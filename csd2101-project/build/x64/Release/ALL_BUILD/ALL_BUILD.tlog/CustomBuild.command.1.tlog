@@ -1,0 +1,10 @@
+^D:\COMPUTERGRAPHICSFINALPROJECT\CSD2101-PROJECT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ComputerGraphicsFinalProject/csd2101-project -BD:/ComputerGraphicsFinalProject/csd2101-project/build --check-stamp-file D:/ComputerGraphicsFinalProject/csd2101-project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
