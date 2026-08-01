@@ -625,6 +625,12 @@ or window) coordinates from the bottom-left corner to upper-left corner.
       height = dev->GetHeight();
   }
 
+  // checking for interpmode
+  gfxInterpMode im = dev->GetInterpMode();
+
+  //Enumeration type gfxInterpMode is declared in GraphicsPipe.h with
+  //enumeration constants : GFX_LINEAR_INTERP or GFX_HYPERBOLIC_INTERP.
+
   // now we start the loop
   for(int y{ymin} ; y < ymax; ++y){
     float heval0{ eval0 };
@@ -655,6 +661,17 @@ or window) coordinates from the bottom-left corner to upper-left corner.
         float b = heval1 / area;
         float c = heval2 / area;
 
+        // for hyperbolic interpolation, we use the (variable)/w form
+
+        float i_w{}; // this is the current pixel's 1/w (calculated via interpolation)
+        float pixel_w{}; // saving this so we can convert back the variables later
+
+        if (im == GFX_HYPERBOLIC_INTERP) {
+
+            i_w = (a * v0.i_w + b * v1.i_w + c * v2.i_w);
+            pixel_w = 1 / i_w;
+        }
+
         gfxVertex m_vertex{};
 
         m_vertex.x_d = static_cast<float>(x);
@@ -662,17 +679,43 @@ or window) coordinates from the bottom-left corner to upper-left corner.
 
         // if there is texture, calculate that 
         if (tex) {
-            float s = (a * (v0.s) + b * (v1.s) + c * (v2.s));
-            float t = (a * (v0.t) + b * (v1.t) + c * (v2.t));
+
+            float s{};
+            float t{};
+
+            if (im == GFX_HYPERBOLIC_INTERP) {
+                s = (a * v0.s_w + b * v1.s_w + c * v2.s_w) * pixel_w;
+                t = (a * (v0.t_w) + b * (v1.t_w) + c * (v2.t_w)) * pixel_w;
+            }
+            else {
+                s = (a * (v0.s) + b * (v1.s) + c * (v2.s));
+                t = (a * (v0.t) + b * (v1.t) + c * (v2.t));
+            }
             m_vertex.s = s;
             m_vertex.t = t;
         }
         else {
             // calculate color
-            float red = (a * (v0.r) + b * (v1.r) + c * (v2.r));
-            float green = (a * (v0.g) + b * (v1.g) + c * (v2.g));
-            float blue = (a * (v0.b) + b * (v1.b) + c * (v2.b));
-            float alpha = (a * (v0.a) + b * (v1.a) + c * (v2.a));
+
+            float red{};
+            float green{};
+            float blue{};
+            float alpha{};
+
+            if (im == GFX_HYPERBOLIC_INTERP) {
+
+                red = (a * (v0.r_w) + b * (v1.r_w) + c * (v2.r_w)) * pixel_w;
+                green = (a * (v0.g_w) + b * (v1.g_w) + c * (v2.g_w)) * pixel_w;
+                blue = (a * (v0.b_w) + b * (v1.b_w) + c * (v2.b_w)) * pixel_w;
+                alpha = (a * (v0.a) + b * (v1.a) + c * (v2.a)); // alpha remains the same
+
+            }
+            else {
+                red = (a * (v0.r) + b * (v1.r) + c * (v2.r));
+                green = (a * (v0.g) + b * (v1.g) + c * (v2.g));
+                blue = (a * (v0.b) + b * (v1.b) + c * (v2.b));
+                alpha = (a * (v0.a) + b * (v1.a) + c * (v2.a));
+            }
 
             m_vertex.r = red;
             m_vertex.g = green;
@@ -684,6 +727,7 @@ or window) coordinates from the bottom-left corner to upper-left corner.
 
         if (wdepth) {
             
+          
             float depth = (a * (v0.z_d) + b * (v1.z_d) + c * (v2.z_d));
             int flipped_y = static_cast<int>(height - 1 - y);
             if (depthBuf[flipped_y * width + x] > depth) {
