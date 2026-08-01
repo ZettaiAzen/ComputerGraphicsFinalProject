@@ -578,10 +578,18 @@ or window) coordinates from the bottom-left corner to upper-left corner.
 
   // if it is fine, calculate all the edge equations
 
+  // bounding box, get min and max xy values
+  int xmin = std::floor(std::min({ v0.x_d, v1.x_d, v2.x_d }));
+  int xmax = std::ceil(std::max({ v0.x_d, v1.x_d, v2.x_d }));
+
+  int ymin = std::floor(std::min({ v0.y_d, v1.y_d, v2.y_d }));
+  int ymax = std::ceil(std::max({ v0.y_d, v1.y_d, v2.y_d }));
+
   // c -> P0.x*P1.y - P1.x*P0.y
   gfxVector3 l0{(v1.y_d - v2.y_d), (v2.x_d - v1.x_d),(v1.x_d * v2.y_d - v2.x_d * v1.y_d) };  // it is opposite v0, v2-v1
   gfxVector3 l1{ (v2.y_d - v0.y_d), (v0.x_d - v2.x_d),(v2.x_d * v0.y_d - v0.x_d * v2.y_d) }; // opposite v1,  v0-v2
   gfxVector3 l2{ (v0.y_d - v1.y_d), (v1.x_d - v0.x_d), (v0.x_d*v1.y_d - v1.x_d*v0.y_d)}; // opposite v2,  v1-v0
+
 
   // checking for top left
 
@@ -594,13 +602,6 @@ or window) coordinates from the bottom-left corner to upper-left corner.
   auto dotProduct = [](gfxVector3 const& v0, gfxVector3 const& v1) -> float{
       return (v0.x * v1.x + v0.y * v1.y + v0.z * v1.z);
   };
-
-  // bounding box, get min and max xy values
-  int xmin = std::min({v0.x_d, v1.x_d, v2.x_d});
-  int xmax = std::max({ v0.x_d, v1.x_d, v2.x_d });
-
-  int ymin = std::min({ v0.y_d, v1.y_d, v2.y_d });
-  int ymax = std::max({ v0.y_d, v1.y_d, v2.y_d });
 
 
   // precompute the a, b ,c
@@ -712,19 +713,19 @@ or window) coordinates from the bottom-left corner to upper-left corner.
 /*  _________________________________________________________________________ */
 void YourRasterizer::
 DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
-  /*! Render a device frame point.
+/*! Render a device frame point.
 
-      @param dev -->  Pointer to the pipe to render to.
-      @param v0  -->  Vertex with device frame coordinates previously computed.
+   @param dev -->  Pointer to the pipe to render to.
+   @param v0  -->  Vertex with device frame coordinates previously computed.
 
-      The framebuffer is a linear array of 32-bit pixels.
-      fb[y * width + x] will access a pixel at (x, y). The
-      pixel format is xxRRGGBB (thus the shifting that's
-      going on to pack the color components into a single
-      32-bit pixel value.
-  */
+   The framebuffer is a linear array of 32-bit pixels.
+   fb[y * width + x] will access a pixel at (x, y). The
+   pixel format is xxRRGGBB (thus the shifting that's
+   going on to pack the color components into a single
+   32-bit pixel value.
+*/
 {
-  //@todo Implement me.
+    //@todo Implement me.
 
     unsigned int* framebuffer = dev->GetFrameBuffer();
     if (!framebuffer) { // just incase??
@@ -736,19 +737,19 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
 
     // check if x y coords are even in the range
 
-    int x = static_cast<int>(v0.x_d);
-    int y = static_cast<int>(v0.y_d);
+   /* int x = static_cast<int>(v0.x_d);
+    int y = static_cast<int>(v0.y_d);*/
 
-    int flipped_y = height - y - 1;
+    float flipped_y = height - v0.y_d - 1.f;
 
-    if ((flipped_y >= height || flipped_y < 0) || (x >= width || x < 0)) {
+    if ((flipped_y >= height || flipped_y < 0) || (v0.x_d >= width || v0.x_d < 0)) {
         return; // skip this point
     }
 
 
     // i need to check if im using colours or texture here
     // set framebuffer to colour
-    
+
     // check if im doing colour or texture
     unsigned int* tex = dev->GetCurrentTexture();
 
@@ -762,18 +763,23 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
         int  tW = static_cast<int>(dev->GetCurrentTextureWidth());
         int  tH = static_cast<int>(dev->GetCurrentTextureHeight());
 
-        int scaled_s = static_cast<int>(tW * floor_s);
-        int scaled_t = static_cast<int>(tH * floor_t);
-        
-        // clamping just in case of rounding errors
-        scaled_s = std::clamp(scaled_s, 0, static_cast<int>(tW - 1));
-        scaled_t = std::clamp(scaled_t, 0, static_cast<int>(tH - 1));
+        float scaled_s = (tW * floor_s);
+        float scaled_t = (tH * floor_t);
 
-        int flipped_t = tH - 1 - scaled_t;
+        // clamping just in case of rounding errors
+        scaled_s = std::clamp(scaled_s, 0.f, (tW - 1.f));
+        scaled_t = std::clamp(scaled_t, 0.f, (tH - 1.f));
+
+        float flipped_t = tH - 1 - scaled_t;
+
+        int y = std::floor(flipped_y);
+        int x = std::floor(v0.x_d);
+        int s = static_cast<int>(scaled_s);
+        int t = static_cast<int>(scaled_t);
 
         // check for valid
         if ((flipped_t < tH && flipped_t >= 0) && (scaled_s < tW && scaled_s >= 0)) {
-            framebuffer[flipped_y * width + x] = tex[flipped_t * tW + scaled_s];
+            framebuffer[y * width + x] = tex[t * tW + s];
         }
 
     }
@@ -793,12 +799,14 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
         clr |= m_g << 8;
         clr |= m_b;
 
-            
-        framebuffer[flipped_y * width + x] = clr;
-        
+        int y = std::floor(flipped_y);
+        int x = std::floor(v0.x_d);
+
+        framebuffer[y * width + x] = clr;
+
     }
 
-  return;
+    return;
 }
 
 /*  _________________________________________________________________________ */
