@@ -2,6 +2,7 @@
 @file    submit.cpp
 @author  Prasanna Ghali       (pghali@digipen.edu)
 @co-author  Parminder Singh   (parminder.singh@digipen.edu)
+            Jolin Wong Xinhui (jolinxinhui.w@digipen.edu)
 
 Consolidates the implementations you must complete -- bounding spheres
 (gfxModel::ComputeModelBVSphere, gfxSphere::Transform), culling/clipping
@@ -579,11 +580,11 @@ or window) coordinates from the bottom-left corner to upper-left corner.
   // if it is fine, calculate all the edge equations
 
   // bounding box, get min and max xy values
-  int xmin = std::floor(std::min({ v0.x_d, v1.x_d, v2.x_d }));
-  int xmax = std::ceil(std::max({ v0.x_d, v1.x_d, v2.x_d }));
+  int xmin = static_cast<int>(std::floor(std::min({ v0.x_d, v1.x_d, v2.x_d })));
+  int xmax = static_cast<int>(std::ceil(std::max({ v0.x_d, v1.x_d, v2.x_d })));
 
-  int ymin = std::floor(std::min({ v0.y_d, v1.y_d, v2.y_d }));
-  int ymax = std::ceil(std::max({ v0.y_d, v1.y_d, v2.y_d }));
+  int ymin = static_cast<int>(std::floor(std::min({ v0.y_d, v1.y_d, v2.y_d })));
+  int ymax = static_cast<int>(std::ceil(std::max({ v0.y_d, v1.y_d, v2.y_d })));
 
   // c -> P0.x*P1.y - P1.x*P0.y
   gfxVector3 l0{(v1.y_d - v2.y_d), (v2.x_d - v1.x_d),(v1.x_d * v2.y_d - v2.x_d * v1.y_d) };  // it is opposite v0, v2-v1
@@ -656,8 +657,8 @@ or window) coordinates from the bottom-left corner to upper-left corner.
 
         gfxVertex m_vertex{};
 
-        m_vertex.x_d = x;
-        m_vertex.y_d = y;
+        m_vertex.x_d = static_cast<float>(x);
+        m_vertex.y_d = static_cast<float>(y);
 
         // if there is texture, calculate that 
         if (tex) {
@@ -684,7 +685,7 @@ or window) coordinates from the bottom-left corner to upper-left corner.
         if (wdepth) {
             
             float depth = (a * (v0.z_d) + b * (v1.z_d) + c * (v2.z_d));
-            int flipped_y = height - 1 - y;
+            int flipped_y = static_cast<int>(height - 1 - y);
             if (depthBuf[flipped_y * width + x] > depth) {
                 DrawPoint(dev, m_vertex);
                 depthBuf[flipped_y * width + x] = depth;
@@ -746,7 +747,6 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
         return; // skip this point
     }
 
-
     // i need to check if im using colours or texture here
     // set framebuffer to colour
 
@@ -772,8 +772,8 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
 
         float flipped_t = tH - 1 - scaled_t;
 
-        int y = std::floor(flipped_y);
-        int x = std::floor(v0.x_d);
+        int y = static_cast<int>(std::floor(flipped_y));
+        int x = static_cast<int>(std::floor(v0.x_d));
         int s = static_cast<int>(scaled_s);
         int t = static_cast<int>(scaled_t);
 
@@ -799,8 +799,8 @@ DrawPoint(gfxGraphicsPipe *dev, gfxVertex const&	v0)
         clr |= m_g << 8;
         clr |= m_b;
 
-        int y = std::floor(flipped_y);
-        int x = std::floor(v0.x_d);
+        int y = static_cast<int>(std::floor(flipped_y));
+        int x = static_cast<int>(std::floor(v0.x_d));
 
         framebuffer[y * width + x] = clr;
 
@@ -822,18 +822,18 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
   //@todo Implement me.
 
     // need to see which direction we are going and the line dydx
-    int dx = v1.x_d - v0.x_d;
-    int dy = v1.y_d - v0.y_d;
+    int dx = static_cast<int>(v1.x_d - v0.x_d);
+    int dy = static_cast<int>(v1.y_d - v0.y_d);
 
     bool isSwapped{ std::abs(dy) > std::abs(dx) };
 
     int x, y, xstep, ystep, d, dmaj, dmin;
 
-    x = v0.x_d;
-    y = v0.y_d;
+    x = static_cast<int>(v0.x_d);
+    y = static_cast<int>(v0.y_d);
 
-    dx = v1.x_d - v0.x_d;
-    dy = v1.y_d - v0.y_d;
+    dx = static_cast<int>(v1.x_d - v0.x_d);
+    dy = static_cast<int>(v1.y_d - v0.y_d);
 
     xstep = (dx < 0) ? -1 : 1;
     ystep = (dy < 0) ? -1 : 1;
@@ -850,9 +850,6 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
     d = (2 * dy) - dx;
     dmaj = (2 * dy) - (2 * dx);
     dmin = (2 * dy);
-
-    // checking for texture
-    unsigned int* tex = dev->GetCurrentTexture();
 
     // checking for depth test
     bool wdepth = dev->DepthTestEnabled();
@@ -876,12 +873,8 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
             DrawPoint(dev, v0);
         }
     }
-    
-  
 
-    // i guess we have to interpolate ? ?
-    
-    // t = i/dx * (v1.s - v0.s) + v0.s ...
+    // i guess we have to interpolate ? ? for z value i guess..
 
     for (int i = 1; i < dx; ++i) {
         if (d > 0) { // we move!
@@ -896,22 +889,12 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
         gfxVertex m_vertex{v0};
         float t = i / (float)dx;
 
-        // checking for colour or texture or depth
+        // checking for colour or depth
 
-
-
-        if (tex) {
-            m_vertex.s += t * (v1.s-v0.s);
-            m_vertex.t += t * (v1.t - v0.t);
-        }
-        else {
-            // calculate color
-
-            m_vertex.r += t * (v1.r - v0.r);
-            m_vertex.g += t * (v1.g - v0.g);
-            m_vertex.b += t * (v1.b - v0.b);
-            m_vertex.a += t * (v1.a - v0.a);
-        }
+        m_vertex.r = 0.f;
+        m_vertex.g = 0.f;
+        m_vertex.b = 0.f;
+        m_vertex.a = 0.f;
 
         if (wdepth) {
             float* depthBuf = dev->GetDepthBuffer();
@@ -924,24 +907,24 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
             int real_x{};
 
             if (isSwapped) {
-                flipped_y = height - 1 - x;
+                flipped_y = static_cast<int>(height - 1 - x);
                 real_x = y;
             }
             else {
-                flipped_y = height - 1 - y;
+                flipped_y = static_cast<int>(height - 1 - y);
                 real_x = x;
             }
             if (flipped_y < height && real_x < width) {
                 if (depthBuf[flipped_y * width + real_x] > m_vertex.z_d) {
                     if (isSwapped) {
-                        m_vertex.x_d = y;
-                        m_vertex.y_d = x;
+                        m_vertex.x_d = static_cast<float>(y);
+                        m_vertex.y_d = static_cast<float>(x);
                         DrawPoint(dev, m_vertex); // to look at
                     }
                     else {
 
-                        m_vertex.x_d = x;
-                        m_vertex.y_d = y;
+                        m_vertex.x_d = static_cast<float>(x);
+                        m_vertex.y_d = static_cast<float>(y);
                         DrawPoint(dev, m_vertex); // to look at
                     }
                     depthBuf[flipped_y * width + real_x] = m_vertex.z_d;
@@ -952,14 +935,14 @@ DrawLine(gfxGraphicsPipe *dev, gfxVertex const&	v0, gfxVertex const&	v1)
         else {
             if (isSwapped) {
 
-                m_vertex.x_d = y;
-                m_vertex.y_d = x;
+                m_vertex.x_d = static_cast<float>(y);
+                m_vertex.y_d = static_cast<float>(x);
                 DrawPoint(dev, m_vertex); // to look at
             }
             else {
 
-                m_vertex.x_d = x;
-                m_vertex.y_d = y;
+                m_vertex.x_d = static_cast<float>(x);
+                m_vertex.y_d = static_cast<float>(y);
                 DrawPoint(dev, m_vertex); // to look at
             }
         }
@@ -1009,6 +992,24 @@ Move(gfxVector3 const& p)
 	of the required camera.
 */
    //@todo Implement me.
+    gfxVector3 bx, by, bz;
+
+    // get the basis vectors
+    GetBasisVectors(&bx, &by, &bz);
+
+    gfxVector3 xDisp = -p.x * bx;
+    gfxVector3 yDisp = p.y * by;
+
+    // for z, which is the look at axis, we have to ignore the y value because moving is parallel to the floor
+    bz.y = 0.f;
+    bz.Normalize();
+    gfxVector3 zDisp = -p.z * bz;
+
+    // adjust the position of the camera with these displacement vectors
+    mFrom += (xDisp + yDisp + zDisp);
+    mAt += (xDisp + yDisp + zDisp);
+
+    
 }
 
 /*  _________________________________________________________________________ */
@@ -1029,6 +1030,9 @@ Move(float x, float y, float z)
 	of the required camera.
 */
   //@todo Implement me.
+
+    Move(gfxVector3(x, y, z));
+
 }
 
 /*  _________________________________________________________________________ */
@@ -1039,6 +1043,50 @@ UpdateSphericalFromPoints()
 */
 {
   //@todo Implement me.
+
+    //!< Distance between camera at and target positions.
+                                                        //!< Here, we are specifying the radius of a sphere
+                                                        //!< centered at mFrom and mAt is a point on the surface
+                                                        //!< of the sphere.
+    gfxVector3 radiusVec = mAt - mFrom;
+    mRadius = radiusVec.Length();
+
+    //!< Latitude angle alpha [-pi/2..pi/2] where 
+                                                        //!< (pi/2 - alpha) radians is the angle between the view-vector
+                                                        //!< and up axis (0, 1, 0). When alpha is pi/2, the view-vector
+                                                        //!< is oriented along (0, 1, 0) and when alpha is -pi/2, the
+                                                        //!< view-vector is oriented along (0, -1, 0).
+                                                        //!< See class notes for pictures.
+    mLatitude = std::asin(radiusVec.y / mRadius);
+
+    //!< Azimuth angle beta [0..2pi] where beta is the angle between
+                                                        //!< the view vector projected onto the ZX-plane and z-axis (0, 0, 1).
+                                                        //!< beta increases from 0 to 2pi radians in counter-clockwise direction
+                                                        //!< when viewed from a point on up axis looking down along negative up axis.
+                                                        //!< See class presentations for pictures.
+    auto arctan = [](float pi, float pk) -> float {
+        if (pk != 0 && pi >= 0) {
+            return std::atan2(pi, pk);
+        }
+
+        if (pk == 0 && pi > 0) {
+            return PI / 2.f;
+        }
+
+        if(pk != 0 && pi < 0){
+            return (2 * PI + std::atan2(pi, pk));
+        }
+
+        if (pk == 0 && pi < 0) {
+            return (3 * PI) / 2.f;
+        }
+
+        return 0.f;
+    };
+
+    mAzimuth = arctan(radiusVec.x, radiusVec.z);
+
+
 }
 
 /*  _________________________________________________________________________ */
@@ -1049,4 +1097,13 @@ UpdatePointsFromSpherical()
 */
 {
   //@todo Implement me.
+
+    gfxVector3 vec{};
+    vec.x = mRadius * std::cos(mLatitude) * std::sin(mAzimuth);
+    vec.y = mRadius * std::sin(mLatitude);
+    vec.z = mRadius * std::cos(mLatitude) * std::cos(mAzimuth);
+
+    vec += mFrom;
+
+    mAt = vec;
 }

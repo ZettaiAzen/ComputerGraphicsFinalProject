@@ -19,7 +19,7 @@ All content (c) 2002 DigiPen Institute of Technology, all rights reserved.
 // You must implement these functions first for all tasks except the
 // first-person camera and rasterizer to work correctly!!!
 #define YOUR_RASTERIZER
-//#define YOUR_CAMERA
+#define YOUR_CAMERA
 #define YOUR_CULLER_CLIPPER
 
 #include  "../../GfxLib/gfx/GFX.h"
